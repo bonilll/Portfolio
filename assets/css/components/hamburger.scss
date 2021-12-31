@@ -1,0 +1,38 @@
+.hamburger-containerext {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 70px;
+  z-index: 9999999;
+}
+
+.hamburger-container{
+  @apply block mt-15;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.hamburger-wrapper {
+  @apply block;
+}
+
+.hamburger-line {
+  @apply bg-gray-900 block my-10 relative;
+  width: 40px;
+  height: 2px;
+  border-radius: 100px;
+
+  &__left {
+    @apply bg-gray-100 block absolute ;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+}
+
+

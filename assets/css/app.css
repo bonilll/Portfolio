@@ -1,0 +1,26 @@
+
+
+@import "global.scss";
+/*Components*/
+
+@import "components/access.css";
+@import "components/mda-lable.scss";
+/*@import "components/font.css";*/
+@import "components/project.scss";
+@import "components/virtualskybox.css";
+@import "components/navbar.scss";
+@import "components/hamburger.scss";
+@import "components/cursor.scss";
+@import "components/logo.css";
+@import "components/c-contact-hover.scss";
+@import "components/footer.scss";
+@import "components/about.scss";
+@import "components/project-page.scss";
+
+@import "tailwindcss/base";
+@import "base/base.css";
+@import "tailwindcss/components";
+@import "components/components.css";
+@import "tailwindcss/utilities";
+@import "utilities/utilities.css";
+

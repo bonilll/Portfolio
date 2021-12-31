@@ -1,0 +1,87 @@
+.c-hamburger-open {
+  &__1 {
+    @apply  w-0 absolute bg-gray-900;
+    top: 0;
+    left: 0;
+    //width: 20vw;
+    height: 100vh;
+    z-index: 3;
+    overflow: hidden;
+  }
+  &__2 {
+    @apply  w-0 absolute bg-gray-100;
+    top: 0;
+    left: 0;
+    //width: 60vw;
+    height: 100vh;
+    z-index: 2;
+    overflow: hidden;
+  }
+  &__3 {
+    @apply  w-0 absolute bg-gray-900;
+    top: 0;
+    right: 0;
+    //width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    overflow: hidden;
+  }
+}
+.opacity-hamburger {
+  opacity: 0;
+}
+.C-navbar-container {
+}
+
+.c-navar-link {
+  @apply my-15 mx-20 text-gray-900 text-16;
+  //-webkit-text-stroke: .3px #f1f1f1;
+  font-family: basis;
+  font-weight: 100;
+}
+
+.C-navbar-container_item-2 {
+  @apply w-full flex absolute bottom-0;
+}
+.c-navbar-icon {
+  @apply flex flex-row;
+}
+.c-navbar-img {
+  @apply pr-30 align-middle;
+
+  & a img {
+    width: 30px;
+  }
+}
+.c-navbar-item{
+  @apply block text-gray-100 text-14 text-left;
+  font-weight: 300;
+}
+.c-navbar-bar {
+  @apply bg-gray-100 block;
+  height: 2px;
+  width: 30px;
+  transform: translate(460%, -800%);
+}
+
+.active {
+
+  color: #6f6f6f !important;
+}
+
+
+.link-mail{
+  @apply block text-gray-100 text-18;
+
+  & p{
+    @apply block text-gray-100 text-14 pt-20;
+  }
+  & a{
+    @apply block text-gray-100 text-14;
+  }
+}
+.gradient{
+  padding-bottom: 6px;
+  background-color: rgba(241,241,241,1);
+  //background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,1));
+}

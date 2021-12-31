@@ -1,0 +1,71 @@
+-- Select a single poem
+SELECT u.username,
+  p.title, p.poem, p.date_submitted, p.date_approved
+FROM users u
+  JOIN poems p ON u.user_id = p.user_id
+WHERE p.poem_id = 1
+
+-- Select all approved poems
+SELECT p.poem_id, p.title, p.date_approved, 
+    c.category, u.username
+FROM poems p
+  JOIN categories c ON c.category_id = p.category_id
+  JOIN users u ON u.user_id = p.user_id
+WHERE p.date_approved IS NOT NULL
+ORDER BY p.date_approved DESC
+
+-- Select the latest three approved poems
+SELECT p.poem_id, p.title, p.date_approved, 
+    c.category, u.username
+FROM poems p
+  JOIN categories c ON c.category_id = p.category_id
+  JOIN users u ON u.user_id = p.user_id
+WHERE p.date_approved IS NOT NULL
+ORDER BY p.date_approved DESC
+LIMIT 0, 3
+
+-- Select number of approved poems
+SELECT COUNT(p.poem_id) AS num
+FROM poems p
+  JOIN categories c ON c.category_id = p.category_id
+  JOIN users u ON u.user_id = p.user_id
+WHERE p.date_approved IS NOT NULL
+
+-- Select categories that have approved poems
+SELECT c.category_id, c.category,
+    COUNT(p.poem_id) AS num_poems
+  FROM categories c
+    JOIN poems p ON c.category_id = p.category_id
+  WHERE p.date_approved IS NOT NULL
+  GROUP BY c.category_id
+  ORDER BY c.category
+
+-- Select users that have written approved poems
+SELECT u.user_id, u.username, 
+    COUNT(p.poem_id) AS num_poems
+  FROM users u
+    JOIN poems p ON u.user_id = p.user_id
+  WHERE p.date_approved IS NOT NULL
+  GROUP BY u.user_id
+  ORDER BY u.username
+
+-- Filter approved poems on category_id and user_id
+ SELECT p.poem_id, p.title, p.date_approved, 
+  c.category, u.username
+  FROM poems p
+  JOIN categories c ON c.category_id = p.category_id
+  JOIN users u ON u.user_id = p.user_id
+  WHERE p.date_approved IS NOT NULL
+    AND c.category_id = ?
+    AND u.user_id = ?
+  ORDER BY category desc
+  LIMIT 0, 2
+
+-- Select a single poem, getting user and category info as well
+SELECT u.username, u.user_id,
+  p.title, p.poem, p.date_submitted, p.date_approved,
+  c.category_id, c.category
+FROM users u
+  JOIN poems p ON u.user_id = p.user_id
+  JOIN categories c ON c.category_id = p.category_id
+WHERE p.poem_id = ?

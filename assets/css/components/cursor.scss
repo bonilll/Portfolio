@@ -1,0 +1,28 @@
+.cursor {
+  @apply fixed bg-gray-400  rounded-full block m-0 p-0;
+  position: fixed;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  width: 60px;
+  height: 60px;
+  opacity: .1;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.cursor-point {
+  //background-image: url("http://projectc.test/assets/img/Oval_pointer.svg");
+  @apply bg-gray-400 ;
+  margin: 0;
+  padding: 0;
+  width: 5px;
+  height: 5px;
+  z-index: 999;
+  border-radius: 99999px;
+  position: fixed;
+  //filter: invert(100%);
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  //mix-blend-mode: difference;
+  user-select: none;
+  pointer-events: none;
+
+}

@@ -1,0 +1,66 @@
+.c-about-bar {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: #f1f1f1;
+  margin-top: 60px;
+  /*margin-bottom: 100px;*/
+}
+.c-about-paragraph{
+  font-family: basis;
+  @apply block text-gray-100 text-14 text-left mt-15;
+  font-weight: 100;
+  max-width: 500px;
+}
+.c-about {
+  @apply my-15;
+  font-family: gt;
+  font-weight: 100;
+  font-size: 36px;
+  color: #f1f1f1;
+}
+.c-about-contact {
+  @apply my-15;
+  font-family: gt;
+  font-weight: 100;
+  font-size: 36px;
+  color: #f1f1f1;
+}
+
+.c-about-cta {
+  margin: 0 auto;
+  display: block;
+  font-family: gt;
+  font-weight: 100;
+  font-size: 24px;
+  color: #f1f1f1;
+}
+
+.c-about-mail {
+  margin: 0 auto;
+  display: block;
+  font-family: basis;
+  font-weight: 100;
+  font-size: 14px;
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.c-about-icon {
+  @apply flex flex-row mt-20;
+}
+
+.c-about-img {
+  @apply pr-30 pl-30 ;
+
+  & a img {
+    width: 30px;
+  }
+}
+
+.c-about-item {
+  font-family: basis;
+  @apply block text-gray-100 text-14 text-left mt-15;
+  font-weight: 300;
+}

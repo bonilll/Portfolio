@@ -1,0 +1,11 @@
+.c-project-page{
+  &__title {
+  @apply  block mx-auto text-gray-900 text-36 text-center;
+  font-family: gt;
+  font-weight: 600;}
+  &__paragraph {
+    @apply  block mx-auto text-gray-900 text-16 text-left;
+    font-family: basis;
+    font-weight: 100;
+  }
+}

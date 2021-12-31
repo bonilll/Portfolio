@@ -1,0 +1,8 @@
+.c-logo-container {
+    @apply m-10 mt-15;
+}
+.c-logo-img{
+    @apply block;
+    /*margin: 0 auto;*/
+    max-width: 60px;
+}

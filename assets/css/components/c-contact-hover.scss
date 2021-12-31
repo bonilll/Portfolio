@@ -1,0 +1,29 @@
+.C-home-contact-hover {
+    @apply w-full flex absolute bottom-0;
+    z-index: 0;
+}
+.c-home-contact-item{
+
+}
+.c-contact-icon {
+    @apply flex flex-row py-15 mr-30 relative;
+}
+.c-home-contact-img {
+    @apply pb-30 mr-30;
+
+}
+.c-home-contact-img a img {
+  width: 30px;
+}
+.c-home-contact-description{
+    @apply block font-bold text-gray-100 text-14;
+}
+.c-home-contact-title {
+  @apply block uppercase font-bold text-gray-100 text-14;
+padding: 4px;
+/*  position: absolute;
+  top: -40%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);*/
+}

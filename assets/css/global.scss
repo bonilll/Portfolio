@@ -1,0 +1,14 @@
+.row {
+  @apply flex flex-wrap mx-auto max-w-row;
+}
+.col {
+  @apply px-8;
+}
+.aligner {
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+}
+.h-calc-hamburger {
+  height: calc(100vh - 100px);
+}
